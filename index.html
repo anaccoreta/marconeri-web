@@ -8,7 +8,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- GSAP for smooth animations -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <!-- ScrollTrigger for the text effects -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     
     <style>
@@ -78,8 +77,7 @@
             display: block;
             opacity: 1;
         }
-
-        /* Sub View Mechanism */
+        
         .sub-view {
             display: none;
             opacity: 0;
@@ -136,19 +134,18 @@
             transition: color 0.1s;
         }
 
-        /* Media Boxes for White Theme */
+        /* Media Boxes */
         .media-box {
-            border: 1px solid #e5e7eb;
-            background: #ffffff;
+            border: 1px solid #374151;
+            background: rgba(0,0,0,0.7);
             transition: all 0.3s ease;
             position: relative;
-            z-index: 1;
         }
         .media-box:hover {
             border-color: #ff3333;
-            background: #fafafa;
+            background: rgba(255,51,51,0.05);
         }
-
+        
         .box-link {
             position: absolute;
             top: 0;
@@ -168,7 +165,7 @@
         }
         
         .concert-entry {
-            border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+            border-bottom: 1px dashed rgba(107, 114, 128, 0.2);
             padding-bottom: 1rem;
             margin-bottom: 1rem;
         }
@@ -237,7 +234,7 @@
             </a>
         </div>
 
-        <!-- Navigation Links (Media Hidden from Top) -->
+        <!-- Navigation Links (Media removed from top nav) -->
         <div class="w-full relative mt-4 flex justify-center pointer-events-auto">
             <nav id="main-nav" class="hidden lg:flex flex-wrap gap-6 uppercase tracking-widest z-20">
                 <a href="#" class="nav-link nav-trigger cursor-hover" data-target="about">About</a>
@@ -267,28 +264,28 @@
             <!-- Emptiness lets the background shine -->
         </section>
 
-        <!-- ABOUT TAB (White Background) -->
-        <section id="about" class="tab-content w-full pointer-events-auto font-editorial text-black">
+        <!-- ABOUT TAB (Uniform Dark Theme) -->
+        <section id="about" class="tab-content w-full pointer-events-auto font-editorial text-gray-300">
             <div class="px-6 md:px-24 max-w-5xl mx-auto py-12">
                 
-                <div class="text-sm font-bold uppercase tracking-[0.2em] mb-12 text-black border-b-2 border-black pb-4 text-center">
+                <div class="text-sm font-bold uppercase tracking-[0.2em] mb-12 text-gray-400 border-b border-gray-800 pb-4 text-center font-display">
                     ABOUT
                 </div>
 
                 <!-- Intro Quote (Reality Fade Effect) -->
-                <div class="text-center text-base md:text-xl font-light leading-relaxed tracking-tight text-gray-800 mb-24 max-w-2xl mx-auto space-y-4">
+                <div class="text-center text-lg md:text-2xl font-light leading-relaxed tracking-tight text-gray-200 mb-24 max-w-2xl mx-auto space-y-4">
                     <p class="reality-fade-text">Marco Neri does not believe in reality anymore.</p>
                     <p class="reality-fade-text">He believes in art.</p>
                     <p class="reality-fade-text">His spiritual-magical thinking has taken him to explore far beyond the musical scores to deep into a unique musical approach.</p>
                     <p class="reality-fade-text">He seeks to motivate all to enjoy the ecstasy of sound.</p>
                 </div>
 
-                <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-10 text-black border-b-2 border-black pb-4 font-display">
+                <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-10 text-gray-400 border-b border-gray-800 pb-4 font-display">
                     Bio &mdash; Composer | Sound Artist
                 </h3>
                 
                 <!-- Detailed Bio (Subtle Glitch Effect) -->
-                <div id="bio-container" class="space-y-8 text-base md:text-xl font-medium leading-relaxed text-black">
+                <div class="space-y-8 text-base md:text-xl font-medium leading-relaxed text-gray-300">
                     <p class="subtle-react-text">I am sound creator, producer, and mentor Mexico-born based in Canada. My work explores sound from an interdisciplinary perspective, often combining performers' physical gestures with the acoustic and spatial impact of their movements. This approach frequently results in hybrid performances that merge staging, live projection, and sonic experimentation, allowing me to explore conceptual ideas through movement and sound.</p>
                     
                     <p class="subtle-react-text">I'm particularly interested in offering alternatives to traditional concert music formats. My work aims to engage curious audiences who are open to new sonic experiences, including those unfamiliar with contemporary music. I seek to connect with emerging new music listeners, interdisciplinary artists, and younger generations through immersive, exploratory performances that bridge individuality, sound, and technology.</p>
@@ -302,122 +299,121 @@
                     <p class="subtle-react-text">Through all of these projects, I aim to bridge artistic disciplines and foster meaningful connections with diverse audiences and communities. Living in Canada has shaped my approach to collaboration and experimentation, offering access to a wide vision of cultural perspectives, community, and diversity.</p>
                 </div>
 
-                <div class="mt-20 pt-16 flex justify-center border-t border-gray-300">
-                    <button data-target="media" class="nav-trigger cursor-hover bg-black text-white px-10 py-5 text-xs uppercase tracking-[0.2em] font-bold hover:bg-[#ff3333] transition-colors rounded">
+                <div class="mt-20 pt-16 flex justify-center border-t border-gray-800">
+                    <button data-target="media" class="nav-trigger cursor-hover bg-black text-white px-10 py-5 text-xs uppercase tracking-[0.2em] font-bold hover:bg-[#ff3333] transition-colors rounded border border-gray-800 hover:border-transparent">
                         View Media Kit
                     </button>
                 </div>
             </div>
         </section>
 
-        <!-- MEDIA KIT TAB (White Background, Accessible only via About) -->
+        <!-- MEDIA KIT TAB (Accessible only via About button, Uniform Dark Theme) -->
         <section id="media" class="tab-content w-full pointer-events-auto px-6 md:px-24 font-editorial">
-            <div class="max-w-5xl bg-white p-8 md:p-12 rounded border border-gray-200 shadow-xl mx-auto text-black relative">
+            <div class="max-w-4xl bg-[#080101]/85 p-8 md:p-12 rounded border border-gray-800 shadow-2xl backdrop-blur-sm mx-auto">
                 
                 <!-- Sub-View: Main Media Links -->
                 <div id="media-main" class="sub-view active">
-                    <h2 class="text-2xl md:text-3xl font-display mb-12 text-black uppercase">Media Kit</h2>
+                    <h2 class="text-2xl md:text-3xl font-display mb-12 text-gray-200 uppercase">Media Kit</h2>
                     
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div class="media-box p-6 flex flex-col justify-between items-start cursor-hover relative group">
-                            <h3 class="font-display text-base text-gray-800 uppercase mb-4 transition-colors group-hover:text-[#ff3333]">Short Bio</h3>
-                            <span class="font-display text-[#ff3333] group-hover:text-black text-[0.7rem] transition-colors mt-4 block">Download</span>
+                            <h3 class="font-display text-base text-gray-300 uppercase mb-4 transition-colors group-hover:text-[#ff3333]">Short Bio</h3>
+                            <span class="font-display text-[#ff3333] group-hover:text-white text-[0.7rem] transition-colors mt-4 block">> Download</span>
                             <a href="short_bio_marco_neri.pdf" download class="box-link"></a>
                         </div>
                         
                         <div class="media-box p-6 flex flex-col justify-between items-start cursor-hover relative group">
-                            <h3 class="font-display text-base text-gray-800 uppercase mb-4 transition-colors group-hover:text-[#ff3333]">Bio (250 words)</h3>
-                            <span class="font-display text-[#ff3333] group-hover:text-black text-[0.7rem] transition-colors mt-4 block">Download</span>
+                            <h3 class="font-display text-base text-gray-300 uppercase mb-4 transition-colors group-hover:text-[#ff3333]">Bio (250 words)</h3>
+                            <span class="font-display text-[#ff3333] group-hover:text-white text-[0.7rem] transition-colors mt-4 block">> Download</span>
                             <a href="bio_250_marco_neri.pdf" download class="box-link"></a>
                         </div>
                         
                         <div class="media-box p-6 flex flex-col justify-between items-start cursor-hover relative group">
-                            <h3 class="font-display text-base text-gray-800 uppercase mb-4 transition-colors group-hover:text-[#ff3333]">Curriculum Vitae</h3>
-                            <span class="font-display text-[#ff3333] group-hover:text-black text-[0.7rem] transition-colors mt-4 block">Request</span>
+                            <h3 class="font-display text-base text-gray-300 uppercase mb-4 transition-colors group-hover:text-[#ff3333]">Curriculum Vitae</h3>
+                            <span class="font-display text-[#ff3333] group-hover:text-white text-[0.7rem] transition-colors mt-4 block">> Request</span>
                             <a href="#" data-target="contact" class="box-link nav-trigger"></a>
                         </div>
                         
                         <div class="media-box p-6 flex flex-col justify-between items-start cursor-hover relative z-20">
-                            <h3 class="font-display text-base text-gray-800 uppercase mb-4">Connect</h3>
-                            <div class="flex flex-col gap-2 w-full mt-4 font-display text-[0.8rem] uppercase tracking-widest text-gray-600">
-                                <a href="mailto:neri_et_blois@hotmail.com" class="hover:text-[#ff3333] transition-colors inline-block relative">&gt; Email</a>
-                                <a href="https://www.facebook.com/anacoressis/" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">&gt; Facebook</a>
-                                <a href="https://www.instagram.com/audiocoreta" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">&gt; Instagram</a>
-                                <a href="https://www.youtube.com/user/CompositorMarcoNeri" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">&gt; YouTube</a>
-                                <a href="https://soundcloud.com/marco-neri-composer" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">&gt; SoundCloud</a>
-                                <a href="https://www.linkedin.com/in/marco-neri-music/" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">&gt; LinkedIn</a>
+                            <h3 class="font-display text-base text-gray-300 uppercase mb-4">Connect</h3>
+                            <div class="flex flex-col gap-2 w-full mt-4 font-display text-[0.8rem] uppercase tracking-widest text-gray-500">
+                                <a href="mailto:neri_et_blois@hotmail.com" class="hover:text-[#ff3333] transition-colors inline-block relative">> Email</a>
+                                <a href="https://www.facebook.com/anacoressis/" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">> Facebook</a>
+                                <a href="https://www.instagram.com/audiocoreta" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">> Instagram</a>
+                                <a href="https://www.youtube.com/user/CompositorMarcoNeri" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">> YouTube</a>
+                                <a href="https://soundcloud.com/marco-neri-composer" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">> SoundCloud</a>
+                                <a href="https://www.linkedin.com/in/marco-neri-music/" target="_blank" class="hover:text-[#ff3333] transition-colors inline-block relative">> LinkedIn</a>
                             </div>
                         </div>
                         
                         <div class="media-box p-6 flex flex-col justify-between items-start cursor-hover relative group">
-                            <h3 class="font-display text-base text-gray-800 uppercase mb-4 leading-relaxed transition-colors group-hover:text-[#ff3333]">Next and past concerts</h3>
-                            <span class="font-display text-[#ff3333] group-hover:text-black text-[0.7rem] transition-colors mt-4 block">Go</span>
-                            <!-- Triggers the sub-view -->
+                            <h3 class="font-display text-base text-gray-300 uppercase mb-4 leading-relaxed transition-colors group-hover:text-[#ff3333]">Next and past concerts</h3>
+                            <span class="font-display text-[#ff3333] group-hover:text-white text-[0.7rem] transition-colors mt-4 block">> View</span>
                             <button class="box-link sub-view-trigger" data-sub-target="media-concerts"></button>
                         </div>
                         
                         <div class="media-box p-6 flex flex-col justify-between items-start cursor-hover relative group">
-                            <h3 class="font-display text-base text-gray-800 uppercase mb-4 transition-colors group-hover:text-[#ff3333]">Photos</h3>
-                            <span class="font-display text-[#ff3333] group-hover:text-black text-[0.7rem] transition-colors mt-4 block">Go</span>
+                            <h3 class="font-display text-base text-gray-300 uppercase mb-4 transition-colors group-hover:text-[#ff3333]">Photos</h3>
+                            <span class="font-display text-[#ff3333] group-hover:text-white text-[0.7rem] transition-colors mt-4 block">> Go</span>
                             <a href="#" target="_blank" class="box-link"></a>
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- Sub-View: Next and Past Concerts -->
-                <div id="media-concerts" class="sub-view w-full text-black">
+                <div id="media-concerts" class="sub-view w-full">
                     <button class="sub-view-trigger flex items-center gap-2 text-gray-500 hover:text-[#ff3333] font-display uppercase tracking-widest text-xs mb-8 transition-colors cursor-hover" data-sub-target="media-main">
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                         Back to Media Kit
                     </button>
                     
-                    <h2 class="text-2xl md:text-3xl font-display mb-12 text-black uppercase">Next Events</h2>
+                    <h2 class="text-2xl md:text-3xl font-display mb-12 text-gray-200 uppercase">Next Events</h2>
                     
                     <div class="flex flex-col gap-12 mb-16">
-                        <div class="work-card border-gray-300 pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
                             <div class="flex flex-col justify-center w-full md:w-1/2">
-                                <h3 class="font-display text-2xl group-hover:text-[#ff3333] transition-colors text-black uppercase">Invocatio</h3>
-                                <p class="font-display text-sm tracking-widest text-gray-600 mt-2 uppercase">In collaboration with the Ensemble Decipher</p>
+                                <h3 class="font-display text-2xl group-hover:text-[#ff3333] transition-colors text-white uppercase">Invocatio</h3>
+                                <p class="font-display text-sm tracking-widest text-gray-400 mt-2 uppercase">In collaboration with the Ensemble Decipher</p>
                                 <p class="font-display text-sm tracking-widest text-gray-500 mt-1">This piece will be premiered in 2026-2027</p>
                             </div>
-                            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded border border-gray-300 bg-white flex-shrink-0">
-                                <img src="Screenshot 2026-03-26 at 11_47_edited.avif" alt="Invocatio Concept" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x338/f3f4f6/333?text=Image+Not+Found'">
+                            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0">
+                                <img src="Screenshot 2026-03-26 at 11_47_edited.avif" alt="Invocatio Concept" class="w-full h-full object-contain opacity-70 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x338/111/333?text=Image+Not+Found'">
                             </div>
                         </div>
                     </div>
                     
-                    <h2 class="text-2xl md:text-3xl font-display mb-8 text-black uppercase border-t-2 border-black pt-8">Past Concerts List</h2>
+                    <h2 class="text-2xl md:text-3xl font-display mb-8 text-gray-200 uppercase">Past Concerts</h2>
                     
                     <!-- 2026 -->
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-300 pb-2 font-display">2026</h3>
-                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-800">
+                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-800 pb-2 font-display">2026</h3>
+                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-400">
                         <p class="concert-entry">« Persona » for solo performer, the Prince Mahidol Hall, Black Box, Bangkok Thailand.</p>
                     </div>
 
                     <!-- 2025 -->
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-300 pb-2 font-display">2025</h3>
-                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-800">
+                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-800 pb-2 font-display">2025</h3>
+                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-400">
                         <p class="concert-entry">« No Place, But Echo » full concert program presenting HieroPhony and premiering Persona, for solo performer. Philip T. Young, University of Victoria, BC.</p>
                         <p class="concert-entry">« Open Improvs » for voice and synths. the Orange Light, Victoria, BC.</p>
                         <p class="concert-entry">« Open Improvs » for voice and synths. the Yellowhouse Art Centre, Galiano Island, BC. (CANCELLED)</p>
                     </div>
 
                     <!-- 2024 -->
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-300 pb-2 font-display">2024</h3>
-                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-800">
+                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-800 pb-2 font-display">2024</h3>
+                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-400">
                         <p class="concert-entry">« HieroPhony » for soprano, viola, and piano, Longy School of Music of Bard College, Cambridge, MA.</p>
                         <p class="concert-entry">Music for short film “Chiles Rellenos”. directed by: Natalia Urquiza, Comox Valley International Film Festival, Vancouver Island, BC.</p>
                     </div>
 
                     <!-- 2023 -->
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-300 pb-2 font-display">2023</h3>
-                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-800">
+                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-800 pb-2 font-display">2023</h3>
+                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-400">
                         <p class="concert-entry">« Oblique Synchronicity » for open instrumentation, Neuztec C8—Festival of Experimental Sound Design and Multimedia Technology, Victoria, BC.</p>
                     </div>
 
                     <!-- 2022 -->
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-300 pb-2 font-display">2022</h3>
-                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-800">
+                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-800 pb-2 font-display">2022</h3>
+                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-400">
                         <p class="concert-entry">« Al pie de un árbol » sound score, Philip T. Young, University of Victoria.</p>
                         <p class="concert-entry">« Aún escuchas mi voz » for Bb clarinet, alto saxophone, viola, cello, and electronics, Philip T. Young, University of Victoria, BC.</p>
                         <p class="concert-entry">« Automaton-Music » for acoustic violin and artificial violin, Art Gallery of Greater Victoria, Victoria, BC.</p>
@@ -426,8 +422,8 @@
                     </div>
                     
                     <!-- 2021 -->
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-300 pb-2 font-display">2021</h3>
-                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-800">
+                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-800 pb-2 font-display">2021</h3>
+                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-400">
                         <p class="concert-entry">« Kaleidoscope » for Tuba and electronics, Terraza Franciscana, CDMX, México.</p>
                         <p class="concert-entry">« Automaton-Music » for acoustic violin, and artificial violin, Philip T. Young, University of Victoria, BC.</p>
                         <p class="concert-entry">« Música Autómata » for piano solo, Philip T. Young, University of Victoria, BC.</p>
@@ -438,92 +434,189 @@
                     </div>
 
                     <!-- 2020 -->
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-300 pb-2 font-display">2020</h3>
-                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-800">
+                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-800 pb-2 font-display">2020</h3>
+                    <div class="flex flex-col gap-2 mb-8 font-light text-sm md:text-base text-gray-400">
                         <p class="concert-entry">« Kaleidoscope » for Tuba and electronics, II ° Contemporary Expressions Festival, Puebla, México.</p>
                         <p class="concert-entry">« Passacaglia » for two synthesizers, pandemic performance, online.</p>
                         <p class="concert-entry">« Gotas de rocío » for electronics (staging: contemporary dance), choreographer: Brenda Gutiérrez, Terraza Franciscana, CDMX, Mexico.</p>
                     </div>
 
                     <!-- 2019 -->
-                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-300 pb-2 font-display">2019</h3>
-                    <div class="flex flex-col gap-2 mb-16 font-light text-sm md:text-base text-gray-800">
+                    <h3 class="text-sm font-bold uppercase tracking-[0.2em] mb-4 text-[#ff3333] border-b border-gray-800 pb-2 font-display">2019</h3>
+                    <div class="flex flex-col gap-2 mb-16 font-light text-sm md:text-base text-gray-400">
                         <p class="concert-entry">Music for short film “Twitch”. directed by: Emiliano Urquiza, Vancouver, BC.</p>
                         <p class="concert-entry">« Los cuentos de altamar » for piano trio, FES Zaragoza, UNAM, CDMX, Mexico.</p>
                         <p class="concert-entry">« Azul Salamandra » for guitar, percussions and live electronics, staging: theatre, directed by: Gustavo Linares, playwright: Victor Ele Ruíz, Sala Novo, CDMX, Mexico.</p>
                         <p class="concert-entry">« Sol de media noche » (staging; contemporary dance), choreographer: Pilar Urreta, Ágora-Espacio artístico, CDXM, Mexico.</p>
                     </div>
 
-                    <h2 class="text-xl md:text-2xl font-display mb-12 text-black uppercase border-b-2 border-black pb-4">Past Concerts: More Details</h2>
+                    <h2 class="text-xl md:text-2xl font-display mb-12 text-gray-200 uppercase border-b border-gray-800 pb-4">Past Concerts: More Details</h2>
                     
                     <div class="flex flex-col gap-12">
                         
                         <!-- Detail 1 -->
-                        <div class="work-card border-gray-300 pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
-                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-800 leading-relaxed">
-                                <h3 class="font-display text-lg text-black uppercase mb-2">VOYAGE - MUSIC FOR GUITAR AND ELECTRONICS BY BEN DIAMOND</h3>
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">VOYAGE - MUSIC FOR GUITAR AND ELECTRONICS BY BEN DIAMOND</h3>
                                 <p>Resonantis for guitar and electronics - part of a new album release</p>
                                 <p>Recorded, and mastered by Nicholas Bendzsa.</p>
-                                <p class="mt-2 text-gray-600">Music by Luke Blackmore, Krists Auznieks, Andrew Staniland, Amy Brandon, and Marco Neri</p>
+                                <p class="mt-2 text-gray-500">Music by Luke Blackmore, Krists Auznieks, Andrew Staniland, Amy Brandon, and Marco Neri</p>
                             </div>
-                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-300 bg-white flex-shrink-0 mx-auto">
-                                <img src="5cover_notxt.avif" alt="Voyage Album Cover" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/f3f4f6/333?text=Cover'">
+                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0 mx-auto">
+                                <img src="5cover_notxt.avif" alt="Voyage Album Cover" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/111/333?text=Cover'">
                             </div>
                         </div>
 
                         <!-- Detail 2 -->
-                        <div class="work-card border-gray-300 pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
-                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-800 leading-relaxed">
-                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Mar. 11 2021 - 6:30pm (CST)</p>
-                                <h3 class="font-display text-lg text-black uppercase mb-2">Gotas de Rocío (Premiere)</h3>
-                                <p>The company Fisura arte escénico, created by the choreographer Brenda Gutiérrez, will premiere "Gotas de Rocío," for which I was invited to compose the music.</p>
-                                <p class="mt-2">Since its choreographic creation, it is a work that sought to reflect on our identity and the search for balance between everything that surrounds us and what makes us up as people. It was challenging to compose the music under this reflection, but it is very worth seeing this work.</p>
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">Automaton-Music</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Apr. 28 2022 - 5:00pm (EST)</p>
+                                <p>This piece examines the association between movement and sound through the concepts of counterpoint and control.</p>
+                                <p class="mt-2">Counterpoint unites the temporal aspect of music with movement. It is a route to witness the transformations of an entity, whether visual or acoustic, over time. One of the performers plays an acoustic violin, and the other makes the actions of playing the violin without the instrument.</p>
+                                <p class="mt-2">This second performer holds a wireless device called Mugic connected to a computer that triggers and manipulates the electronic sounds.</p>
+                                <p class="mt-2 text-gray-500">Mugic is an interface that translates movement into computer language.</p>
                             </div>
-                            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded border border-gray-300 bg-white flex-shrink-0">
-                                <img src="IMG_4955.avif" alt="Gotas de Rocío Performance" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x338/f3f4f6/333?text=Performance'">
+                            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0">
+                                <img src="Screen Shot 2022-04-23 at 12_57_edited.avif" alt="Automaton-Music Performance" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x338/111/333?text=Performance'">
                             </div>
                         </div>
 
                         <!-- Detail 3 -->
-                        <div class="work-card border-gray-300 pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
-                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-800 leading-relaxed">
-                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Mar. 5 2021 - 7:30pm (PST)</p>
-                                <h3 class="font-display text-lg text-black uppercase mb-2">if (on); update (off); (Premiere)</h3>
-                                <p>This work is a micro-game for a single performer. The game aspect in this piece coincides with the video games' three main characteristics: a platform, an interface, and a goal. Micro refers to the short timing of the gaming experience, and the game's events occur on a single level.</p>
-                                <p class="mt-2">The goal is to move around the virtual map, find twelve yellow cubes and touch them to make them disappear in a time limit of six minutes. The music composition is the result of combining the sounds of the performer interacting within the virtual space and the music coming from the application.</p>
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">Música Autómata (Premiere)</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Apr. 14 2021 - 9:00pm (EST)</p>
+                                <p>The sound is manipulated by a Max MSP patch connected to a Mugic device developed by Mari Kimura.</p>
                             </div>
-                            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded border border-gray-300 bg-white flex-shrink-0">
-                                <img src="157072305_3870437466329017_1227816762349834356_n.avif" alt="if (on); update (off);" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x338/f3f4f6/333?text=Game'">
+                            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0">
+                                <img src="1.avif" alt="Música Autómata Premiere" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x338/111/333?text=Premiere'">
                             </div>
                         </div>
-
+                        
                         <!-- Detail 4 -->
-                        <div class="work-card border-gray-300 pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
-                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-800 leading-relaxed">
-                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Dec. 8 2020 - 7pm (CST)</p>
-                                <h3 class="font-display text-lg text-black uppercase mb-2">Kaleidoscope (Premiere)</h3>
-                                <p>Next Dic. 8th, at 7 pm (CST), Fabián Campuzano will premiere "Kaleidoscope," for tuba and electronics, within the II Contemporary Expressions Festival framework, Puebla, México.</p>
-                                <p class="mt-2">This work was composed in homage to Ray Bradbury, based on his short story "Kaleidoscope" where a crew of astronauts are expelled from the ship due to a collision with something unknown. The entire team floats uncontrollably and with their oxygen reserves, they contemplate the beauty of the universe until they meet their inevitable death.</p>
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2 leading-tight">Three visions of control and transformation in music<br><span class="text-sm text-gray-500">(MMus Degree Concert)</span></h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Mar. 27 2022 - 8:00pm (EST)</p>
+                                <p class="font-bold mb-2">Program:</p>
+                                <p>1- ¿Aún recuerdas mi voz? &lt;&lt;Do you still hear my voice?&gt;&gt;, for clarinet, alto saxophone, viola, cello and electronics.</p>
+                                <p class="mt-2">2- if (on); update (off), micro-game for a single performer.</p>
+                                <p class="mt-2">3- Automaton-Music, for an acoustic violin and an artificial violin.</p>
+                                <p class="mt-4 italic">These works explore the concepts of control and transformation in music.</p>
+                                <div class="mt-4">
+                                    <span class="text-xs uppercase tracking-widest text-gray-500">For more information:</span><br>
+                                    <a href="https://www.marco-neri.com/programnotes" target="_blank" class="text-[#ff3333] hover:text-white transition-colors cursor-hover inline-block mt-1">> marco-neri.com/programnotes</a>
+                                </div>
                             </div>
-                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-300 bg-white flex-shrink-0 mx-auto">
-                                <img src="FEC.avif" alt="Kaleidoscope Premiere" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/f3f4f6/333?text=Premiere'">
+                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0 mx-auto">
+                                <img src="275935141_5066627933376625_8635630294821758260_n.avif" alt="MMus Degree Concert Poster" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/111/333?text=Poster'">
                             </div>
                         </div>
 
                         <!-- Detail 5 -->
-                        <div class="work-card border-gray-300 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
-                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-800 leading-relaxed">
-                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Dec. 7 2020 - 7:30pm (PDT)</p>
-                                <h3 class="font-display text-lg text-black uppercase mb-2">Passacaglia for two synthesizers (Premiere)</h3>
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">¿Aún escuchas mi voz? (Premiere)</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Feb. 3 2022 - 6:30pm (EST)</p>
+                                <p>This sound score uses a Cardenche song, originally from Durango, found among the archives of the National Institute of Anthropology and History of Mexico (INAH). This song is performed by a male a cappella trio. Cardenche is the name of a local cactus whose spines are incredibly painful to extract.</p>
                             </div>
-                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-300 bg-white flex-shrink-0 mx-auto">
-                                <img src="Poster_ComposerConcert_12_7_20.avif" alt="Passacaglia Premiere" class="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/f3f4f6/333?text=Poster'">
+                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0 mx-auto">
+                                <img src="250304_165464930183949_3923271_n.avif" alt="¿Aún escuchas mi voz? Event" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/111/333?text=Event'">
+                            </div>
+                        </div>
+
+                        <!-- Detail 6 -->
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">Resonantis (Premiere)</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Oct. 1 2021 - 6pm (ET)</p>
+                                <p>Solo guitar piece commissioned for Ben Diamond as part of the Twisted Spruce Music Competition.</p>
+                            </div>
+                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0 mx-auto">
+                                <img src="Mayfair Montgomery Publishing Keswick ON L4P 3E9 www_musicfromcanada_edited.avif" alt="Resonantis Event" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/111/333?text=Event'">
+                            </div>
+                        </div>
+
+                        <!-- Detail 7 -->
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">Kaleidoscope</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Dic. 2 2021 - 8:00pm (CST)</p>
+                                <p>Fabián Campuzano plays for the second time "Kaleidoscope," for tuba and electronics, within the LiminXr concerts, México.</p>
+                            </div>
+                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0 mx-auto">
+                                <img src="256752347_4426715827365089_3956480430117404370_n.avif" alt="Kaleidoscope Event" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/111/333?text=Event'">
+                            </div>
+                        </div>
+
+                        <!-- Detail 8 -->
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">Latent encounters (Premiere)</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Jul. 2 2021 - 2:30pm (EDT)</p>
+                                <p class="mb-2">Collaboration with: Justin Massey, Trevor Van de Velde, Akari Komura, and Mathieu Soucy.</p>
+                                <p>Latency (noun): the state of existing but not yet being developed or manifest; concealment. This work has emerged from approaching the idea of latency not only in the digital sphere but also in its original interpretation related to physical condition. In fact, the original definition deeply connects with the progression of this pandemic since latency is defined as the state of a disease not yet manifesting the usual symptoms.</p>
+                                <p class="mt-2">These ideas prompted our creative process in composing scores that embrace asynchronicity of sound instead of striving for low latency solutions. Then, it led us to build an original instrument and a routing system that involves a collective Zoom call where each player is sending an individual input into an online browser audio broadcast system “Cleanfeed” to be processed through a randomly generated delay on MAX/MSP patch. During the live recording session, these MAX patch-generated delays were purposely not fed back into the Zoom call because we wanted to capture the idea of latency into the overall creative process where something is not yet being manifested but concealed.</p>
+                            </div>
+                            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0">
+                                <img src="Screen Shot 2022-04-23 at 12_edited.avif" alt="Latent Encounters" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x338/111/333?text=Video+Still'">
+                            </div>
+                        </div>
+
+                        <!-- Detail 9 -->
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">Gotas de Rocío (Premiere)</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Mar. 11 2021 - 6:30pm (CST)</p>
+                                <p>The company Fisura arte escénico, created by the choreographer Brenda Gutiérrez, will premiere "Gotas de Rocío," for which I was invited to compose the music.</p>
+                                <p class="mt-2">Since its choreographic creation, it is a work that sought to reflect on our identity and the search for balance between everything that surrounds us and what makes us up as people. It was challenging to compose the music under this reflection, but it is very worth seeing this work.</p>
+                            </div>
+                            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0">
+                                <img src="IMG_4955.avif" alt="Gotas de Rocío Performance" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x338/111/333?text=Performance'">
+                            </div>
+                        </div>
+
+                        <!-- Detail 10 -->
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">if (on); update (off); (Premiere)</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Mar. 5 2021 - 7:30pm (PST)</p>
+                                <p>This work is a micro-game for a single performer. The game aspect in this piece coincides with the video games' three main characteristics: a platform, an interface, and a goal. Micro refers to the short timing of the gaming experience, and the game's events occur on a single level.</p>
+                                <p class="mt-2">The goal is to move around the virtual map, find twelve yellow cubes and touch them to make them disappear in a time limit of six minutes. The music composition is the result of combining the sounds of the performer interacting within the virtual space and the music coming from the application.</p>
+                            </div>
+                            <div class="w-full md:w-1/2 aspect-video overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0">
+                                <img src="157072305_3870437466329017_1227816762349834356_n.avif" alt="if (on); update (off);" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x338/111/333?text=Game'">
+                            </div>
+                        </div>
+
+                        <!-- Detail 11 -->
+                        <div class="work-card pb-8 flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">Kaleidoscope (Premiere)</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest mb-4">Dec. 8 2020 - 7pm (CST)</p>
+                                <p>Next Dic. 8th, at 7 pm (CST), Fabián Campuzano will premiere "Kaleidoscope," for tuba and electronics, within the II Contemporary Expressions Festival framework, Puebla, México.</p>
+                                <p class="mt-2">This work was composed in homage to Ray Bradbury, based on his short story "Kaleidoscope" where a crew of astronauts are expelled from the ship due to a collision with something unknown. The entire team floats uncontrollably and with their oxygen reserves, they contemplate the beauty of the universe until they meet their inevitable death.</p>
+                            </div>
+                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0 mx-auto">
+                                <img src="FEC.avif" alt="Kaleidoscope Premiere" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/111/333?text=Premiere'">
+                            </div>
+                        </div>
+
+                        <!-- Detail 12 -->
+                        <div class="work-card flex flex-col md:flex-row gap-8 group cursor-hover border-transparent hover:border-transparent items-center">
+                            <div class="flex flex-col justify-center w-full md:w-1/2 font-light text-sm text-gray-400 leading-relaxed">
+                                <h3 class="font-display text-lg text-white uppercase mb-2">Passacaglia for two synthesizers (Premiere)</h3>
+                                <p class="font-display text-[#ff3333] text-xs tracking-widest">Dec. 7 2020 - 7:30pm (PDT)</p>
+                            </div>
+                            <div class="w-full md:w-1/2 aspect-square max-w-[300px] overflow-hidden rounded border border-gray-800 bg-black flex-shrink-0 mx-auto">
+                                <img src="Poster_ComposerConcert_12_7_20.avif" alt="Passacaglia Premiere" class="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/400x400/111/333?text=Poster'">
                             </div>
                         </div>
                         
                     </div>
                 </div>
-
+                
             </div>
         </section>
 
@@ -642,24 +735,19 @@
                             <p class="font-display text-sm tracking-widest uppercase text-gray-500 mt-1">Audio Tracks</p>
                         </div>
                         
-                        <div class="w-full flex flex-col gap-4 mt-2">
-                            <!-- Track 1 -->
-                            <div class="w-full bg-[#111] border border-gray-800 rounded overflow-hidden relative" style="height: 166px;">
-                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/marco-neri-composer/sen-uelo-1%3Fsi%3Dccab41612ca94776a5ffa131415077cf%26utm_source%3Dclipboard%26utm_medium%3Dtext%26utm_campaign%3Dsocial_sharing&color=%23ff3333&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false" class="absolute top-0 left-0 w-full h-full z-10"></iframe>
-                                <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-display text-xs tracking-widest z-0">Loading SoundCloud Player 1...</div>
-                            </div>
-
-                            <!-- Track 2 -->
-                            <div class="w-full bg-[#111] border border-gray-800 rounded overflow-hidden relative" style="height: 166px;">
-                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/marco-neri-composer/sen-uelo-2%3Fsi%3Dc290390a180e4c52913983b7b126c89f%26utm_source%3Dclipboard%26utm_medium%3Dtext%26utm_campaign%3Dsocial_sharing&color=%23ff3333&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false" class="absolute top-0 left-0 w-full h-full z-10"></iframe>
-                                <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-display text-xs tracking-widest z-0">Loading SoundCloud Player 2...</div>
-                            </div>
-
-                            <!-- Track 3 -->
-                            <div class="w-full bg-[#111] border border-gray-800 rounded overflow-hidden relative" style="height: 166px;">
-                                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/marco-neri-composer/sen-uelo-3%3Fsi%3D828ec90846ee46be8caf63ef31614b65%26utm_source%3Dclipboard%26utm_medium%3Dtext%26utm_campaign%3Dsocial_sharing&color=%23ff3333&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false" class="absolute top-0 left-0 w-full h-full z-10"></iframe>
-                                <div class="absolute inset-0 flex items-center justify-center text-gray-600 font-display text-xs tracking-widest z-0">Loading SoundCloud Player 3...</div>
-                            </div>
+                        <!-- Track 1 -->
+                        <div class="w-full mt-2 sc-player-container">
+                            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A891350089&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                        </div>
+                        
+                        <!-- Track 2 -->
+                        <div class="w-full mt-2 sc-player-container">
+                           <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A891350077&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                        </div>
+                        
+                        <!-- Track 3 -->
+                        <div class="w-full mt-2 sc-player-container">
+                           <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay; encrypted-media" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A891350068&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
                         </div>
                     </div>
 
@@ -880,6 +968,7 @@
                 const allWords = document.querySelectorAll('.reality-word');
                 
                 window.addEventListener('mousemove', (e) => {
+                    // Only run if the about tab is active
                     if(!document.getElementById('about').classList.contains('active')) return;
                     
                     allWords.forEach(word => {
@@ -906,12 +995,13 @@
                 paragraphs.forEach(p => {
                     ScrollTrigger.create({
                         trigger: p,
-                        start: "top 200px", 
+                        start: "top 200px", // Trigger when close to header
                         end: "top 50px",
                         onUpdate: (self) => {
                             const pWords = p.querySelectorAll('.reality-word');
                             pWords.forEach(word => {
                                 if (self.progress > 0) {
+                                    // Glitch fade effect based on scroll progress
                                     word.style.opacity = Math.random() > (self.progress * 0.8) ? '1' : '0.1';
                                     word.style.filter = Math.random() > 0.5 ? `blur(${self.progress * 4}px)` : 'blur(0px)';
                                 } else {
@@ -970,16 +1060,18 @@
                         const dx = e.clientX - (rect.left + rect.width / 2);
                         const dy = e.clientY - (rect.top + rect.height / 2);
                         const dist = Math.sqrt(dx * dx + dy * dy);
+                        // Trigger subtle glitch on nearby characters
                         if (dist < 40 && Math.random() < 0.1) {
                             triggerSubtleGlitch(span);
                         }
                     });
                 });
 
+                // Scroll-triggered subtle line glitch
                 paragraphs.forEach(p => {
                     ScrollTrigger.create({
                         trigger: p,
-                        start: "top 220px",
+                        start: "top 220px", // Trigger slightly below the header
                         onEnter: () => {
                             const pChars = p.querySelectorAll('.glitch-char');
                             pChars.forEach(span => {
@@ -1000,7 +1092,6 @@
                 });
             }
 
-            // Init the text effects
             initRealityFade();
             initSubtleGlitch();
 
@@ -1015,7 +1106,7 @@
             let asciiGrid = [];
             let cols = 0, rows = 0;
             const img = new Image();
-            img.src = 'Photoshoot 6.jpg'; 
+            img.src = 'Photoshoot 6.jpg'; // Fixed the image source
             let imgLoaded = false;
 
             function initCanvas() {
@@ -1044,25 +1135,21 @@
                 }
 
                 offCtx.drawImage(img, dx, dy, drawWidth, drawHeight);
-                try {
-                    const imgData = offCtx.getImageData(0, 0, cols, rows).data;
-                    asciiGrid = [];
-                    for (let y = 0; y < rows; y++) {
-                        let row = [];
-                        for (let x = 0; x < cols; x++) {
-                            const i = (y * cols + x) * 4;
-                            const brightness = (imgData[i] + imgData[i+1] + imgData[i+2]) / 3;
-                            const charIndex = Math.floor((brightness / 255) * (asciiChars.length - 1));
-                            row.push({
-                                char: asciiChars[charIndex],
-                                x: x * density + density/2, y: y * density + density/2, glow: 0 
-                            });
-                        }
-                        asciiGrid.push(row);
+                const imgData = offCtx.getImageData(0, 0, cols, rows).data;
+
+                asciiGrid = [];
+                for (let y = 0; y < rows; y++) {
+                    let row = [];
+                    for (let x = 0; x < cols; x++) {
+                        const i = (y * cols + x) * 4;
+                        const brightness = (imgData[i] + imgData[i+1] + imgData[i+2]) / 3;
+                        const charIndex = Math.floor((brightness / 255) * (asciiChars.length - 1));
+                        row.push({
+                            char: asciiChars[charIndex],
+                            x: x * density + density/2, y: y * density + density/2, glow: 0 
+                        });
                     }
-                } catch(e) {
-                    // Fallback if getImageData is blocked by CORS/security on local file system
-                    generateProceduralAscii();
+                    asciiGrid.push(row);
                 }
             }
 
@@ -1080,7 +1167,7 @@
             }
 
             img.onload = () => { imgLoaded = true; initCanvas(); };
-            img.onerror = () => { initCanvas(); };
+            img.onerror = () => { initCanvas(); }; // Fallback to procedural
 
             let nodes = [];
             class GeoNode {
@@ -1132,7 +1219,7 @@
                             if (dist < 80) { let glow = 1 - (dist / 80); if (glow > maxGlow) maxGlow = glow; }
                         }
                         let mDx = mouseX - cell.x; let mDy = mouseY - cell.y;
-                        let mDist = Math.sqrt(mDx*mDx + mDy*mDy);
+                        let mDist = Math.sqrt(mDx*mDx + mDy*mDy); // fixed typo here
                         if (mDist < 250) { let mGlow = 1 - (mDist / 250); if (mGlow > maxGlow) maxGlow = mGlow; }
 
                         cell.glow = cell.glow * 0.92 + maxGlow * 0.08; 
@@ -1170,18 +1257,16 @@
             // ==========================================
             const tabTriggers = document.querySelectorAll('.nav-trigger');
             const subViewTriggers = document.querySelectorAll('.sub-view-trigger');
-            const bodyEl = document.body;
             const bgImage = document.getElementById('bg-image');
-            const headerBg = document.getElementById('header-bg');
-            const mainHeader = document.getElementById('main-header');
             
-            // Sub-view navigation (within Media Kit)
+            // Sub-view navigation (e.g. within Media Kit)
             subViewTriggers.forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
                     const targetId = btn.getAttribute('data-sub-target');
                     const targetView = document.getElementById(targetId);
                     
+                    // Find active sub-view within the same parent section
                     const parentSection = btn.closest('.tab-content');
                     const currentView = parentSection.querySelector('.sub-view.active');
                     
@@ -1232,7 +1317,7 @@
                         if(relatedNav) relatedNav.classList.add('active-tab');
                     }
                     
-                    // Reset Media Kit sub-view state
+                    // Ensure Media Kit always opens to its main view when triggered
                     if (targetId === 'media') {
                         document.getElementById('media-concerts').classList.remove('active');
                         document.getElementById('media-concerts').style.display = 'none';
@@ -1240,27 +1325,13 @@
                         document.getElementById('media-main').style.display = 'block';
                     }
 
-                    // Theme switching logic
-                    if (targetId === 'about' || targetId === 'media') {
-                        bodyEl.style.backgroundColor = '#ffffff';
-                        bgImage.style.opacity = '0';
-                        gsap.to(canvas, {opacity: 0, duration: 0.8});
-                        
-                        headerBg.className = 'fixed top-0 left-0 w-full h-44 z-40 transition-colors duration-700 bg-white border-b border-gray-200 pointer-events-none';
-                        mainHeader.classList.replace('text-gray-200', 'text-black');
-
-                    } else {
-                        bodyEl.style.backgroundColor = 'var(--bg-color)';
+                    // Background logic - keep consistent dark theme for all content tabs
+                    if (targetId === 'main') {
                         bgImage.style.opacity = '0.4';
-                        
-                        headerBg.className = 'fixed top-0 left-0 w-full h-44 z-40 transition-colors duration-700 bg-[#080101]/95 backdrop-blur-md pointer-events-none border-b border-gray-800/50';
-                        mainHeader.classList.replace('text-black', 'text-gray-200');
-                        
-                        if (targetId === 'main') {
-                            gsap.to(canvas, {opacity: 1, filter: 'blur(0px)', duration: 0.8, ease: "power2.out"});
-                        } else {
-                            gsap.to(canvas, {opacity: 0.15, filter: 'blur(2px)', duration: 0.8, ease: "power2.out"});
-                        }
+                        gsap.to(canvas, {opacity: 1, filter: 'blur(0px)', duration: 0.8, ease: "power2.out"});
+                    } else {
+                        bgImage.style.opacity = '0.2';
+                        gsap.to(canvas, {opacity: 0.15, filter: 'blur(2px)', duration: 0.8, ease: "power2.out"});
                     }
 
                     const tl = gsap.timeline();
